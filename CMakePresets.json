@@ -1,0 +1,162 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 19
+    },
+    "configurePresets": [
+        {
+            "name": "default",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_INSTALL_PREFIX": "$env{MSH_ROOT_PATH}/packages/${presetName}",
+                "CMAKE_INSTALL_LIBDIR": "lib",
+                "CMAKE_INSTALL_BINDIR": "bin",
+                "CMAKE_INSTALL_INCLUDEDIR": "include"
+            },
+            "hidden": true
+        },
+        {
+            "name": "Ninja-GCC-x86",
+            "inherits": "default",
+            "description": "Ninja using GCC targeting x86",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_C_FLAGS": "-m32",
+                "CMAKE_CXX_FLAGS": "-m32"
+            },
+            "hidden": true
+        },
+        {
+            "name": "Ninja-GCC-x64",
+            "inherits": "default",
+            "description": "Ninja using GCC targeting x64",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_C_FLAGS": "-m64",
+                "CMAKE_CXX_FLAGS": "-m64"
+            },
+            "hidden": true
+        },
+        {
+            "name": "Ninja-VS-x86",
+            "inherits": "default",
+            "description": "Ninja using Visual Studio targeting x86",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_C_FLAGS": "/arch:IA32",
+                "CMAKE_CXX_FLAGS": "/arch:IA32"
+            },
+            "hidden": true
+        },
+        {
+            "name": "Ninja-VS-x64",
+            "inherits": "default",
+            "description": "Ninja using Visual Studio targeting x64",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_C_FLAGS": "/arch:AVX2",
+                "CMAKE_CXX_FLAGS": "/arch:AVX2"
+            },
+            "hidden": false
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Ninja-GCC-x86-Debug",
+            "configurePreset": "Ninja-GCC-x86",
+            "configuration": "Debug"
+        },
+        {
+            "name": "Ninja-GCC-x86-Release",
+            "configurePreset": "Ninja-GCC-x86",
+            "configuration": "Release"
+        },
+        {
+            "name": "Ninja-GCC-x64-Debug",
+            "configurePreset": "Ninja-GCC-x64",
+            "configuration": "Debug"
+        },
+        {
+            "name": "Ninja-GCC-x64-Release",
+            "configurePreset": "Ninja-GCC-x64",
+            "configuration": "Release"
+        },
+        {
+            "name": "Ninja-VS-x86-Debug",
+            "configurePreset": "Ninja-VS-x86",
+            "configuration": "Debug"
+        },
+        {
+            "name": "Ninja-VS-x86-Release",
+            "configurePreset": "Ninja-VS-x86",
+            "configuration": "Release"
+        },
+        {
+            "name": "Ninja-VS-x64-Debug",
+            "configurePreset": "Ninja-VS-x64",
+            "configuration": "Debug"
+        },
+        {
+            "name": "Ninja-VS-x64-Release",
+            "configurePreset": "Ninja-VS-x64",
+            "configuration": "Release"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "Ninja-GCC-x86-Debug-Tests",
+            "configurePreset": "Ninja-GCC-x86",
+            "description": "Run tests for GCC x86 Debug build",
+            "inheritConfigureEnvironment": true
+        },
+        {
+            "name": "Ninja-GCC-x86-Release-Tests",
+            "configurePreset": "Ninja-GCC-x86",
+            "description": "Run tests for GCC x86 Release build",
+            "inheritConfigureEnvironment": true
+        },
+        {
+            "name": "Ninja-GCC-x64-Debug-Tests",
+            "configurePreset": "Ninja-GCC-x64",
+            "description": "Run tests for GCC x64 Debug build",
+            "inheritConfigureEnvironment": true
+        },
+        {
+            "name": "Ninja-GCC-x64-Release-Tests",
+            "configurePreset": "Ninja-GCC-x64",
+            "description": "Run tests for GCC x64 Release build",
+            "inheritConfigureEnvironment": true
+        },
+        {
+            "name": "Ninja-VS-x86-Debug-Tests",
+            "configurePreset": "Ninja-VS-x86",
+            "description": "Run tests for Visual Studio x86 Debug build",
+            "inheritConfigureEnvironment": true
+        },
+        {
+            "name": "Ninja-VS-x86-Release-Tests",
+            "configurePreset": "Ninja-VS-x86",
+            "description": "Run tests for Visual Studio x86 Release build",
+            "inheritConfigureEnvironment": true
+        },
+        {
+            "name": "Ninja-VS-x64-Debug-Tests",
+            "configurePreset": "Ninja-VS-x64",
+            "description": "Run tests for Visual Studio x64 Debug build",
+            "inheritConfigureEnvironment": true
+        },
+        {
+            "name": "Ninja-VS-x64-Release-Tests",
+            "configurePreset": "Ninja-VS-x64",
+            "description": "Run tests for Visual Studio x64 Release build",
+            "inheritConfigureEnvironment": true
+        }
+    ]
+}
