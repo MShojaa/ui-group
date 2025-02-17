@@ -1,17 +1,13 @@
 // ----------> Prims <----------
 
-local Align(align='center', x=0, y=0) = {
+local Align(align='top-left', top=0, left=0) = {
   align: align,
-  x: x,
-  y: y,
+  top: top,
+  left: left,
 };
 local Size(width=0, height=0) = {
   width: width,
   height: height,
-};
-local Position(top=0, left=0) = {
-  top: top,
-  left: left,
 };
 local Padding(top=0, left=0, right=0, bottom=0) = {
   top: top,
@@ -41,13 +37,12 @@ local Font(family='arial', src='', size=8) = {
   src: src,
   size: size,
 };
-local TextStyle(font=Font(), color=Color(), opacity=100, dir='ltr', align='center', decor='none') = {
+local TextStyle(font=Font(), color=Color(), opacity=100, dir='ltr', align='center') = {
   font: font,
   color: color,
   opacity: opacity,
   dir: dir,
   align: align,
-  decor: decor,
 };
 
 // ----------> DTO <----------
@@ -56,7 +51,6 @@ local Widget(id,
              type,
              align=Align(),
              size=Size(),
-             position=Position(),
              padding=Padding(),
              border=Border(),
              radius=0,
@@ -69,7 +63,6 @@ local Widget(id,
     type: type,
     align: align,
     size: size,
-    position: position,
     padding: padding,
     border: border,
     radius: radius,
@@ -81,7 +74,6 @@ local Widget(id,
     type: type,
     align: align,
     size: size,
-    position: position,
     padding: padding,
     border: border,
     radius: radius,
