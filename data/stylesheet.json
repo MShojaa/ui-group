@@ -1,0 +1,91 @@
+{
+   "type": "stylesheet",
+   "version": 1,
+   "widgets": [
+      {
+         "align": {
+            "align": "center",
+            "x": 0,
+            "y": 0
+         },
+         "border": {
+            "color": {
+               "b": 0,
+               "g": 0,
+               "r": 0
+            },
+            "opacity": 100,
+            "side": {
+               "bottom": false,
+               "left": false,
+               "right": false,
+               "top": false
+            },
+            "width": 0
+         },
+         "clickable": false,
+         "id": "id",
+         "opacity": 100,
+         "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+         },
+         "position": {
+            "left": 0,
+            "top": 0
+         },
+         "radius": 0,
+         "scrollable": false,
+         "size": {
+            "height": 0,
+            "width": 0
+         },
+         "type": "widget"
+      },
+      {
+         "align": {
+            "align": "center",
+            "x": 0,
+            "y": 0
+         },
+         "border": {
+            "color": {
+               "b": 0,
+               "g": 0,
+               "r": 0
+            },
+            "opacity": 100,
+            "side": {
+               "bottom": false,
+               "left": false,
+               "right": false,
+               "top": false
+            },
+            "width": 0
+         },
+         "clickable": false,
+         "id": "image_1",
+         "opacity": 100,
+         "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+         },
+         "position": {
+            "left": 0,
+            "top": 0
+         },
+         "radius": 0,
+         "scrollable": false,
+         "size": {
+            "height": 0,
+            "width": 0
+         },
+         "src": "",
+         "type": "image"
+      }
+   ]
+}

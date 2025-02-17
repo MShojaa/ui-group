@@ -1,0 +1,30 @@
+{
+   "version": 1,
+   "widgets": [
+      {
+         "id": "button",
+         "properties": [
+            {
+               "name": "clickable",
+               "value": true
+            },
+            {
+               "name": "label:text",
+               "value": "click me!"
+            }
+         ]
+      },
+      {
+         "id": "label",
+         "properties": [
+            {
+               "name": "text",
+               "value": "Hello World"
+            }
+         ]
+      },
+      {
+         "id": "id"
+      }
+   ]
+}
