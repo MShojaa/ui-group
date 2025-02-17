@@ -13,8 +13,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(FETCHCONTENT_FULLY_DISCONNECTED "" ON)
 option(BUILD_ALL_TESTS "" ON)
-option(BUILD_PRIMS_TESTS "" ON)
+
+if(BUILD_ALL_TESTS)
+    enable_testing()
+    include(CTest)
+endif()
 
 add_subdirectory(SmartWidget)
-
-enable_testing()
