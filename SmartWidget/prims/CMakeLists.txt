@@ -1,18 +1,9 @@
-set(SRCS
-    src/Align.cpp
-    src/Border.cpp
-    src/Color.cpp
-    src/Font.cpp
-    src/Padding.cpp
-    src/Side.cpp
-    src/Size.cpp
-    src/TextStyle.cpp
-)
+file(GLOB SRCS "src/*.cpp")
 
-set(PRIMS_TARGET prims)
+set(PRIMS_TARGET prims_trgt)
 
 add_library(${PRIMS_TARGET} STATIC ${SRCS})
-add_library(msh::ui_PRIMS ALIAS ${PRIMS_TARGET})
+add_library(msh::ui_prims ALIAS ${PRIMS_TARGET})
 
 target_include_directories(${PRIMS_TARGET} PRIVATE include/msh/ui)
 target_include_directories(${PRIMS_TARGET} PUBLIC include)
